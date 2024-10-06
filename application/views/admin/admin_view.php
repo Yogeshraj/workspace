@@ -1,45 +1,86 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Admin - CS WEB Dashboard</title>
-		<link rel="stylesheet" href="<?php echo base_url();?>/assests/css/demo.css" type="text/css" />
-		<link rel="stylesheet" href="<?php echo base_url();?>/assests/font-awesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
-		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
-		<link rel="stylesheet" href="<?php echo base_url();?>/assests/css/admin/admin_style.css" type="text/css" />
-	</head>
-	<body>
+<?php require('admin_header.php'); ?>
     <div class="nav">
       <div class="nav-left">
-        CS WEB Team
+        My Team
       </div>
       <div class="nav-right">
-        <?php echo $this->session->userdata('s_role'); ?>
+		  <span id="user"><?php echo $this->session->userdata('u_name'); ?></span>
+				<a href="<?php echo base_url();?>welcome/logout">Logout</a>
       </div>
     </div>
     <div class="content">
       <aside class="content-left">
-
+      	<ul class="sidebar_menu">
+      		<li><a href="javascript:void(0)"><i class="fa fa-angle-right pull-right"></i>View Data</a></li>
+      		<li><a href="javascript:void(0)"><i class="fa fa-angle-right pull-right"></i>View Chart</a></li>
+      		<li><a href="javascript:void(0)"><i class="fa fa-angle-right pull-right"></i>Add User</a></li>
+      		<li><a href="javascript:void(0)"><i class="fa fa-angle-right pull-right"></i>Settings</a></li>
+      	</ul>
       </aside>
 			<aside class="content-right">
+        <div class="addons">
+        <div class="getbydate">
+          <label>Minimum Date:</label><input name="min" id="min" type="text">
+          <label>Maximum Date:</label><input name="max" id="max" type="text">
+        </div>
+				<div  class="circle" id="circle">
+					<span class="add-plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+				</div>
+      </div>
 
+                <div class="admin-report-table">
+              <table width="100%" align="center" id="admin_data">
+                <thead>
+                <tr>
+                  <th class="heading">
+                    R. No
+                  </th>
+                  <th class="heading open-search">
+                    User Name
+                  </th>
+                  <th class="heading">
+                    Date
+                  </th>
+                  <th class="heading name_header open-search">
+                    Project Name
+                  </th>
+<!--                   <th class="heading open-search">
+                    Cient Name
+                  </th> -->
+                  <th class="heading">
+                    Billing Status
+                  </th>
+                  <th class="heading">
+                    Service Line
+                  </th>
+					<th class="heading">
+						Job Type
+					</th>
+					<th class="heading">
+						Job Nature
+					</th>
+                  <th class="heading">
+                    Time Taken
+                  </th>
+                  <th class="heading">
+                    Comments
+                  </th>
+                  <th class="heading">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+<!--               <tfoot>
+                  <tr>
+                      <th colspan="9" style="text-align:right">Total:</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                  </tr>
+              </tfoot> -->
+              </table>
+        </div>
       </aside>
     </div>
-
-
-
-
-
-
-
-
-  <script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
-  <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script  type="text/javascript" src="<?php echo base_url();?>/assests/js/script.js"></script>
-  </body>
-  </html>
+    <?php require('admin_add.php'); ?>
+<?php require('admin_footer.php'); ?>

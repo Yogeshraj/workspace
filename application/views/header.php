@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>CS WEB Dashboard</title>
+		<title>Dashboard</title>
 		<link rel="stylesheet" href="<?php echo base_url();?>/assests/css/demo.css" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">

@@ -53,5 +53,5 @@ $route['default_controller'] = 'welcome';
 $route['admin'] = 'admin';
 //$route['(:any)/(:any)'] = 'errors/show_404';
 //$route['404_override'] = 'errors/show_404';
-$route['404_override'] = '';
+$route['404_override'] = 'errors/show_404';
 $route['translate_uri_dashes'] = FALSE;

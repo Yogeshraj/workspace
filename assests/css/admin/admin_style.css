@@ -53,15 +53,38 @@ align-items: center;
 justify-content: space-between;
 background: #F44336;
 padding: 20px 30px;
-color: #ffffff;    box-shadow: 0px 2px 9px 0px #00000042;}
-.content{padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;}
-.content-left{    background: #ffffff;
-    width: 500px;
-    min-height: 100vh;}
-  .content-right{    background: #ffffff;
-    width: 100%;
-    min-height: 100vh;
-    margin-left: 30px;}
+color: #ffffff;
+box-shadow: 0px 2px 9px 0px #00000042;
+background: #0bc3c3;
+background: -moz-linear-gradient(left, #0bc3c3 0%, #009cff 100%);
+background: -webkit-linear-gradient(left, #0bc3c3 0%, #009cff 100%);
+background: linear-gradient(to right, #0bc3c3 0%, #009cff 100%);
+z-index: 99999;
+}
+.content{
+padding: 0px;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+
+}
+.content-left{min-height:100%;/* flex: 0.3 0 0; */background-color: #383838;color: #929598;position: absolute;width: 150px;display: flex;align-items: self-start;flex-direction: column;}
+.content-right{background: #ffffff;margin-left: 9%;padding: 15px 25px;border-radius: 8px;box-shadow: 0 1px 1px rgba(0,0,0,0.1);font-size: 14px;width: 100%;box-sizing: border-box;margin-top: 20px;    margin-right: 15px;}
+.sidebar_menu li a{
+color: #b8c7ce;
+padding: 15px;
+display: block;
+font-size: 14px;
+}
+.sidebar_menu{flex: 2 1 0;}
+.admin-report-table{margin-top: 40px;}
+.search_box{width: 75%;}
+th.heading{pointer-events:none;}
+th.heading.open-search{pointer-events: auto;}
+div.dt-buttons{padding: 5px 15px;margin: 7px 0px;}
+button.dt-button, div.dt-button, a.dt-button{padding: 10px 25px;background: #00c0ef;border: 1px solid #00acd6;color: #ffffff;font-size: 14px;cursor: pointer;}
+.dt-button.buttons-excel.buttons-html5:hover{background: #00a2ca;}
+.buttons-excel::before{font-family: 'FontAwesome';color:#ffffff;position: relative;left: -8px;content: "\f019";}
+.copyrights{color: #b8c7ce;padding: 10px 10px 20px;display: block;font-size: 14px;}
+.add{margin-top: 10%;}
+.heading.sorting, .heading.sorting_asc, .heading.sorting_desc{pointer-events: auto;}

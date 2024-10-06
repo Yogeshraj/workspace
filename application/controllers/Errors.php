@@ -10,7 +10,8 @@ class Errors extends CI_Controller {
      */
     public function show_404() {
 
-		echo "erorr 404";
+		// echo "erorr 404";
+    $this->load->view('errors/cli/error_404');
 
         # Setting response header as 404
 //        $this->output->set_status_header('404');
